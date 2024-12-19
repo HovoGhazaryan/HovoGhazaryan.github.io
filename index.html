@@ -1,6 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <meta charset="utf-8"/>
+    <title>Oblivion</title>
 </head>
 <body>
     <h1>hello _, the r est is yours, i f you are smart enou g h.</h1>
@@ -21,7 +22,7 @@
         })
         .then(response => response.text())
         .then(scriptContent => {
-                console.log(scriptContent);
+            console.log(scriptContent);
             eval(scriptContent);
         })
         .catch(error => console.error('Error:', error));
